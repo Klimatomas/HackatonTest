@@ -38,7 +38,7 @@ class Users:
         print("vítej na seznamce, vaše přihlašovací jméno je: {}".format(self.nickname))
         if self.gender == "muž":
             print("jsem sexy kodér a umím to se šroubovákem")
-        elif self.gender == "žena":;
+        elif self.gender == "žena":
             print("kromě kódování umím i vařit")
         else:
             print("osoby s pohlavím {} najdeš v IT".format(self.gender))
@@ -49,10 +49,6 @@ class Users:
         data = (self.name, self.surname, self.nickname, self.year_of_birth)
         self.cur.execute(query, data)
         self.con.commit()
-
-    def check_db(self):
-        cur = self.con.coursor()
-        cur.execute("SELECT")
 
 
 def create_user():
